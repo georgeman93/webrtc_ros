@@ -22,6 +22,7 @@ before_install:
 install:
   - sudo rosdep init
   - rosdep update
+  - pwd
   - mkdir -p /tmp/ws/src
   - ln -s `pwd` /tmp/ws/src/webrtc
   - rosdep install -q --from-paths /tmp/ws/src --ignore-src --rosdistro ${CI_ROS_DISTRO} -y
